@@ -5,8 +5,10 @@ export let fizzBuzz = (number) => {
 		result = {
 			status: `Error`,
 			message: `${number}, is not a number.`,
-			data: number,
-			output: `Error.`,
+			data: {
+				input: number,
+				output: "Error",
+			},
 		};
 	}
 
@@ -14,29 +16,37 @@ export let fizzBuzz = (number) => {
 		result = {
 			status: `Ok`,
 			message: `${number} is divisible by 3 & 5.`,
-			data: number,
-			output: `FizzBuzz`,
+			data: {
+				input: number,
+				output: "FizzBuzz", 
+			},
 		};
 	} else if (number % 3 === 0) {
 		result = {
 			status: `Ok`,
 			message: `${number} is divisible by 3.`,
-			data: number,
-			output: `Fizz`,
+			data: {
+				input: number,
+				output: "Fizz",
+			},
 		};
 	} else if (number % 5 === 0) {
 		result = {
 			status: `Ok`,
 			message: `${number} is divisible by 5.`,
-			data: number,
-			output: `Buzz`,
+			data: {
+				input: number,
+				output: "Buzz",
+			},
 		};
 	} else {
 		result = {
 			status: `Ok`,
 			message: `${number} is not divisible neither by 5 or 3.`,
-			data: number,
-			output: `${number}`,
+			data: {
+				input: number,
+				output: number,
+			},
 		};
 	}
 
