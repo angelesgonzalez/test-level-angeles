@@ -6,6 +6,7 @@ export let createResultDiv = (round) => {
 	const resultText = document.createElement("p");
 	resultHeader.textContent = round.data.output;
 	resultText.textContent = round.message;
+	resultDiv.classList.add("result");
 	resultDiv.append(resultHeader, resultText);
 	return resultDiv;
 };
