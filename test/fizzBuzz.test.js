@@ -33,16 +33,15 @@ describe("FizzBuzz test for multiples of 3 and 5", () => {
 	});
 
 	test("returns Buzz when multiple of 5", () => {
-		//Gherking test
-		/**
-		 * Scenario: Número divisible por 5
-		 * Given un número 10
-		 * When el número es procesado
-		 * Then se muestra "Buzz"
-		 */
-		// Arrange
-		// Act
-		// Assert
+		let value = 5;
+		let expected_response = {
+			status: "Ok", // Código indicando éxito
+			message: `${value} is divisible by 5.`, // Mensaje de validación
+			data: {
+				input: 5, // Número evaluado
+				output: "Buzz", // Resultado esperado
+			},
+		};
 	});
 
 	test("returns FizzBuzz when multiple of 3 and 5", () => {
