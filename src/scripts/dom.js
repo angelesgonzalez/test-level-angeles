@@ -1,3 +1,4 @@
-/**
- * Responsabilidad: gestionar el los flujos de que recibe y muestra la interfáz
- * */ 
+export const form = document.getElementById("fizzBuzz-form");
+
+
+
