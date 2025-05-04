@@ -2,7 +2,7 @@ export let fizzBuzz = (number) => {
 	let result = {};
 
 	if (isNaN(number)) {
-		result = {
+		return {
 			status: `Error`,
 			message: `${number}, is not a number.`,
 			data: {
@@ -18,7 +18,7 @@ export let fizzBuzz = (number) => {
 			message: `${number} is divisible by 3 & 5.`,
 			data: {
 				input: number,
-				output: "FizzBuzz", 
+				output: "FizzBuzz",
 			},
 		};
 	} else if (number % 3 === 0) {
