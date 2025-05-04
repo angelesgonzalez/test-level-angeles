@@ -4,6 +4,8 @@ import { rounds } from "./rounds.js";
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
+	try {
+	} catch (error) {}
 	let numberInput = +document.getElementById("number-input").value;
 	let result = fizzBuzz(numberInput);
 	rounds.push(result);

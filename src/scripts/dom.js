@@ -12,11 +12,18 @@ export let createResultDiv = (round) => {
 };
 
 export let updateHTML = (round) => {
+	let resultContainer = document.getElementById("result-container");
+	let errorContainer = document.getElementById("error-container");
+
+	errorContainer.textContent = "";
+	errorContainer.style.display = "none";
+
 	if (round.status === "Error") {
-		round.classList.add("error");
+		errorContainer.textContent = round.message;
+		errorContainer.style.display = "block";
+		return;
 	}
 
-	let resultContainer = document.getElementById("result-container");
 	let resultDiv = createResultDiv(round);
 	resultContainer.appendChild(resultDiv);
 };
