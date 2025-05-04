@@ -20,6 +20,7 @@ export let updateHTML = (round) => {
 
 	if (round.status === "Error") {
 		errorContainer.textContent = round.message;
+		errorContainer.classList.add("error");
 		errorContainer.style.display = "block";
 		return;
 	}
